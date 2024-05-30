@@ -15,7 +15,7 @@ const transferSol = async() => {
 
     // Generate a new keypair
     const from = Keypair.generate();
-
+    
     // Generate another Keypair (account we'll be sending to)
     const to = Keypair.generate();
 
@@ -44,7 +44,7 @@ const transferSol = async() => {
         SystemProgram.transfer({
             fromPubkey: from.publicKey,
             toPubkey: to.publicKey,
-            lamports: LAMPORTS_PER_SOL / 100
+            lamports: LAMPORTS_PER_SOL 
         })
     );
 
